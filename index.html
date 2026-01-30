@@ -25,9 +25,11 @@ body {
 .top-banner {
     background: linear-gradient(135deg, #5a2d0c, #ff7a00);
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 16px 24px;
+    padding: 16px;
     box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    text-align: center;
 }
 
 .brand-logo {
@@ -35,12 +37,14 @@ body {
 }
 
 .brand {
+    margin-top: 6px;
     font-size: 2.2rem;
     font-weight: 800;
     background: linear-gradient(135deg,#FFD700,#FFEA70,#FFC107);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 /* POSTCARDS */
 .postcard {
@@ -73,6 +77,7 @@ body {
     color: #fff;
 }
 
+
 /* MOBILE */
 @media (max-width: 768px) {
     .brand-logo { height: 60px; }
@@ -84,9 +89,8 @@ body {
 <body>
 
 <div class="top-banner">
-    <div class="d-flex align-items-center gap-3">
+    <div class="text-center">
         <img src="./images/logo.png" class="brand-logo" alt="logo">
-        <div class="brand">GorillazZz</div>
     </div>
 </div>
 
@@ -96,8 +100,8 @@ body {
 	        <a href = "./menu.html" class="postcard d-block text-decoration-none">
                 <img src="./images/Menu.jpeg">
                 <div class="postcard-overlay">
-                    <h6 class="mb-0">Menu</h6>
-                    <small>Explore Us</small>
+                    <h3 class="mb-0">Menu</h3>
+                    <h5>Explore Us</h5>
                 </div>
             </a>
         </div>
@@ -106,8 +110,8 @@ body {
             <a href="https://www.zomato.com/ahmedabad/gorillazzz-sargasan-gandhinagar" class="postcard d-block text-decoration-none">
                 <img src="./images/zomato.png">
                 <div class="postcard-overlay">
-                    <h6 class="mb-0">Zomato</h6>
-                    <small>Order Now</small>
+                    <h3 class="mb-0">Zomato</h3>
+                    <h5>Order Now</h5>
                 </div>
             </a>
         </div>
@@ -116,8 +120,8 @@ body {
             <a href="https://www.swiggy.com/menu/837284?source=sharing" class="postcard d-block text-decoration-none">
                 <img src="./images/Swiggy_logo.png">
                 <div class="postcard-overlay">
-                    <h6 class="mb-0">Swiggy</h6>
-                    <small>Order Now</small>
+                    <h3 class="mb-0">Swiggy</h3>
+                    <h5>Order Now</h5>
                 </div>
             </a>
         </div>
@@ -126,8 +130,8 @@ body {
             <a href="https://www.instagram.com/gorillazzz_zzz" class="postcard d-block text-decoration-none">
                 <img src="./images/insta.jpg">
                 <div class="postcard-overlay">
-                    <h6 class="mb-0">Instagram</h6>
-                    <small>Connect Us</small>
+                    <h3 class="mb-0">Instagram</h3>
+                    <h5>Connect Us</h5>
                 </div>
             </a>
         </div>
@@ -136,8 +140,8 @@ body {
             <a href="https://www.facebook.com/share/1WypQsDQva/?mibextid=wwXIfr" class="postcard d-block text-decoration-none">
                 <img src="./images/facebook.png">
                 <div class="postcard-overlay">
-                    <h6 class="mb-0">Facebook</h6>
-                    <small>Follow Us</small>
+                    <h3 class="mb-0">Facebook</h3>
+                    <h5>Follow Us</h5>
                 </div>
             </a>
         </div>
@@ -146,8 +150,8 @@ body {
             <a href="https://www.google.com/search?sca_esv=dc5fda282d29e3f3&hl=en-US&rlz=1CDGOYI_enIN1102IN1102&cs=1&output=search&kgmid=%2Fg%2F11y4trr2c4&q=GorillazZz&shem=bdslc%2Cepsd1%2Cptotple&shndl=30&source=sh%2Fx%2Floc%2Fact%2Fm4%2F3" class="postcard d-block text-decoration-none">
                 <img src="./images/google.jpg">
                 <div class="postcard-overlay">
-                    <h6 class="mb-0">Google</h6>
-                    <small>Review Us</small>
+                    <h5 class="mb-0">Google</h3>
+                    <h5>Review Us</h5>
                 </div>
             </a>
         </div>
