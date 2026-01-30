@@ -2,41 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GorillazZz</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-/* ===== PAGE BACKGROUND ===== */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
-
     background:
         linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("./images/background.jpeg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll; /* STATIC */
+        url("./images/background.jpeg") center center / cover no-repeat fixed;
 }
 
-.brand-logo {
-    height: 100px;        /* controls logo size */
-    width: auto;         /* keeps aspect ratio */
-    object-fit: contain; /* no distortion */
-}
-
-
-/* ===== TOP BANNER ===== */
+/* TOP BANNER */
 .top-banner {
-    height: 80px;
     background: linear-gradient(135deg, #5a2d0c, #ff7a00);
     display: flex;
     align-items: center;
-    padding: 0 24px;
+    padding: 16px 24px;
     box-shadow: 0 5px 15px rgba(0,0,0,.3);
+}
+
+.brand-logo {
+    height: 100px;
 }
 
 .brand {
@@ -45,10 +40,9 @@ body {
     background: linear-gradient(135deg,#FFD700,#FFEA70,#FFC107);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 8px rgba(255,215,0,.6);
 }
 
-/* ===== POSTCARDS ===== */
+/* POSTCARDS */
 .postcard {
     position: relative;
     aspect-ratio: 1 / 1;
@@ -57,7 +51,6 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,.35);
     transition: transform .3s, box-shadow .3s;
     cursor: pointer;
-    background: rgba(0,0,0,.25);
 }
 
 .postcard:hover {
@@ -71,7 +64,6 @@ body {
     object-fit: cover;
 }
 
-/* Text overlay */
 .postcard-overlay {
     position: absolute;
     bottom: 0;
@@ -80,101 +72,88 @@ body {
     background: linear-gradient(to top, rgba(0,0,0,.85), transparent);
     color: #fff;
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .brand-logo { height: 60px; }
+    .brand { font-size: 1.6rem; }
+}
 </style>
 </head>
 
 <body>
 
-<!-- ===== TOP BANNER ===== -->
 <div class="top-banner">
     <div class="d-flex align-items-center gap-3">
-        <img src="./images/logo.png" alt="GorillazZz Logo" class="brand-logo">
+        <img src="./images/logo.png" class="brand-logo" alt="logo">
         <div class="brand">GorillazZz</div>
     </div>
 </div>
 
-
-<!-- ===== 3x3 GRID ===== -->
 <div class="container py-4">
-
     <div class="row g-3">
 
-	
         <div class="col-12 col-md-4">
-	<a href = "./Menu.html" class="postcard d-block text-decoration-none">
-            <div class="postcard">
+            <a href="./menu.html" class="postcard d-block text-decoration-none">
                 <img src="./images/Menu.jpeg">
                 <div class="postcard-overlay">
                     <h6 class="mb-0">Menu</h6>
                     <small>Explore Us</small>
                 </div>
-            </div>
-	</a>
+            </a>
         </div>
 
         <div class="col-12 col-md-4">
-	<a href = "https://zomato.onelink.me/xqzv/pv1bb4c8" class="postcard d-block text-decoration-none">
-            <div class="postcard">
+            <a href="https://www.zomato.com/ahmedabad/gorillazzz-sargasan-gandhinagar" class="postcard d-block text-decoration-none">
                 <img src="./images/zomato.png">
                 <div class="postcard-overlay">
                     <h6 class="mb-0">Zomato</h6>
                     <small>Order Now</small>
                 </div>
-            </div>
-	</a>
+            </a>
         </div>
-        
-	<div class="col-12 col-md-4">
-        <a href = "https://www.swiggy.com/menu/837284?source=sharing" class="postcard d-block text-decoration-none">
-    	<div class="postcard">
+
+        <div class="col-12 col-md-4">
+            <a href="https://www.swiggy.com/menu/837284?source=sharing" class="postcard d-block text-decoration-none">
                 <img src="./images/Swiggy_logo.png">
                 <div class="postcard-overlay">
                     <h6 class="mb-0">Swiggy</h6>
                     <small>Order Now</small>
                 </div>
-            </div>
-	</a>
+            </a>
         </div>
 
         <div class="col-12 col-md-4">
-	<a href = "https://www.instagram.com/gorillazzz_zzz?igsh=OG9rOW9rd3dpaTZ2&utm_source=qrr" class="postcard d-block text-decoration-none">
-
-            <div class="postcard">
+            <a href="https://www.instagram.com/gorillazzz_zzz" class="postcard d-block text-decoration-none">
                 <img src="./images/insta.jpg">
                 <div class="postcard-overlay">
                     <h6 class="mb-0">Instagram</h6>
                     <small>Connect Us</small>
                 </div>
-            </div>
-	</a>
+            </a>
         </div>
 
         <div class="col-12 col-md-4">
-	<a href = "https://www.facebook.com/share/1WypQsDQva/?mibextid=wwXIfr" class="postcard d-block text-decoration-none">
-            <div class="postcard">
+            <a href="https://www.facebook.com/share/1WypQsDQva/?mibextid=wwXIfr" class="postcard d-block text-decoration-none">
                 <img src="./images/facebook.png">
                 <div class="postcard-overlay">
                     <h6 class="mb-0">Facebook</h6>
                     <small>Follow Us</small>
                 </div>
-            </div>
-	</a>
+            </a>
         </div>
 
         <div class="col-12 col-md-4">
-	<a href = "https://www.google.com/search?sca_esv=dc5fda282d29e3f3&hl=en-US&rlz=1CDGOYI_enIN1102IN1102&cs=1&output=search&kgmid=%2Fg%2F11y4trr2c4&q=GorillazZz&shem=bdslc%2Cepsd1%2Cptotple&shndl=30&source=sh%2Fx%2Floc%2Fact%2Fm4%2F3" class="postcard d-block text-decoration-none">
-            <div class="postcard">
+            <a href="https://www.google.com/search?sca_esv=dc5fda282d29e3f3&hl=en-US&rlz=1CDGOYI_enIN1102IN1102&cs=1&output=search&kgmid=%2Fg%2F11y4trr2c4&q=GorillazZz&shem=bdslc%2Cepsd1%2Cptotple&shndl=30&source=sh%2Fx%2Floc%2Fact%2Fm4%2F3" class="postcard d-block text-decoration-none">
                 <img src="./images/google.jpg">
                 <div class="postcard-overlay">
                     <h6 class="mb-0">Google</h6>
                     <small>Review Us</small>
                 </div>
-            </div>
-	</a>
+            </a>
         </div>
 
     </div>
-
 </div>
 
 </body>
